@@ -6,7 +6,7 @@ from app_posts import views
 app_name = 'posts'
 
 urlpatterns = [
-    path('',views.posts_view,name='list'),
-    path('<slug:slug>/',views.posts_detail_view,name='detail'),
+    path('',views.PostApiView.as_view(),name='list'),
+    path('<slug:slug>/',views.PostDetailApiView.as_view(),name='detail'),
 
 ]
